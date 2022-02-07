@@ -44,7 +44,8 @@ int main(){
 
     cout<<10*10*10*10*10*10*10*10*10<<"\n";
     cout<<10*10*10*10*10*10*10*10*10*10<<"\n"; //overflow happens becuase integer have limits numbers
+    cout<<"\n10*10*10*10*10*10*10*10*10*"<<"\n"; // \n can be in the beginning not necessary to be at the end
 
-
+    
     return 0;
 }
