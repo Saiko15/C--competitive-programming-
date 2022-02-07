@@ -22,5 +22,8 @@ int main(){
 
     cout<<"Hello World\n I'm Ahmed\n I live in Cairo\n";
 
+    cout<<123<<"\n"; // 123 is a number
+    cout<<"123"<<"\n"; // 123 is not a number
+
     return 0;
 }
