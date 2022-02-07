@@ -25,5 +25,12 @@ int main(){
     cout<<123<<"\n"; // 123 is a number
     cout<<"123"<<"\n"; // 123 is not a number
 
+    cout<<1234<<"\n";
+    cout<<1234<<"\n\n";
+
+    cout<<12<<34<<"\n";
+    cout<<1234<<"\n";
+
+
     return 0;
 }
