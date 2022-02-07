@@ -30,6 +30,12 @@ int main(){
 
     cout<<12<<34<<"\n";
     cout<<1234<<"\n";
+    cout<<endl;
+
+    cout<<1+2+3<<"\n";
+    cout<<"1+2+3"<<"\n";
+    cout<<"1+2+3 = "<<1+2+3<<"\n";
+
 
 
     return 0;
