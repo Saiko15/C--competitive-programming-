@@ -11,13 +11,15 @@ int main(){
     cout<<"I'm Ahmed"; 
     cout<<endl;
 
+    //return 0; if we put return 0 here all after that will be ignored cuz return 0 means we are done
+
     cout<<"Hello World"<<endl;
     cout<<"I'm Ahmed";
     cout<<endl;
 
 
     cout<<"Hello World "<<"I'm Ahmed"<<endl<<"I live in Cairo"<<endl; // << called Extraction Operater
-    
+
     cout<<"Hello World\n I'm Ahmed\n I live in Cairo\n";
 
     return 0;
