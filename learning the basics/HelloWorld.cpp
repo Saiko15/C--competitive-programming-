@@ -17,7 +17,8 @@ int main(){
 
 
     cout<<"Hello World "<<"I'm Ahmed"<<endl<<"I live in Cairo"<<endl; // << called Extraction Operater
-
+    
+    cout<<"Hello World\n I'm Ahmed\n I live in Cairo\n";
 
     return 0;
 }
