@@ -35,6 +35,10 @@ int main(){
     cout<<1+2+3<<"\n";
     cout<<"1+2+3"<<"\n";
     cout<<"1+2+3 = "<<1+2+3<<"\n";
+        cout<<endl;
+
+    cout<<7/2<<"\n"; // 3 because it's an integer
+    cout<<7.0/2.0<<"\n"; // 3.5 because it's double
 
 
 
