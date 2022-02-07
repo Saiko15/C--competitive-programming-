@@ -27,3 +27,15 @@ int main()
 
 	cout<<"\n\nBye\n\n";
 }
+
+/*
+
+
+	Guess The output
+	---
+	25
+	14/2
+	7
+	endl
+	Practice makes perfect
+*/
