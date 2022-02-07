@@ -37,9 +37,13 @@ int main(){
     cout<<"1+2+3 = "<<1+2+3<<"\n";
         cout<<endl;
 
-    cout<<7/2<<"\n"; // 3 because it's an integer
+    cout<<6/2<<"\n"; // 3
+    cout<<7/2<<"\n"; // also 3 because it's an integer
     cout<<7.0/2.0<<"\n"; // 3.5 because it's double
+    cout<<endl;
 
+    cout<<10*10*10*10*10*10*10*10*10<<"\n";
+    cout<<10*10*10*10*10*10*10*10*10*10<<"\n"; //overflow happens becuase integer have limits numbers
 
 
     return 0;
