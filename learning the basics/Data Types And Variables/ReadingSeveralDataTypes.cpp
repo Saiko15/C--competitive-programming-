@@ -19,7 +19,7 @@ int main() {
     cin>>name;
 
     cout<<"I'm "<< name<<" belongs to group "<< group << " my weight is "<<weight<<" and I'm "<<age<<" years old";
-
+    
 
     return 0;
 
