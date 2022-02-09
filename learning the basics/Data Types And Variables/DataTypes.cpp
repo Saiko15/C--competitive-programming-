@@ -6,7 +6,7 @@ int main() {
     string name = "Ahmed";
     bool is_married = true;
     double salary = 2400.60;
-    char group = 'S';
+    char group = 'S'; // char can be numbers from -128 to 127
 
     cout<<"My name is "<<name<<". I'm "<<age<<". My monthly salary is "<<salary<<endl; 
 
