@@ -4,9 +4,9 @@ using namespace std;
 int main() {
     int age = 22;
     string name = "Ahmed";
-    bool status = true;
+    bool is_married = true;
     double salary = 2400.60;
-    char ch = 'S';
+    char group = 'S';
 
     cout<<"My name is "<<name<<". I'm "<<age<<". My monthly salary is "<<salary<<endl; 
 
@@ -24,5 +24,8 @@ int main() {
     int age2 = 22; // C-style, popular
     int age3 (30); // constructor intiallization
     int age4 {40}; // Modern intiallization: The Preferred 
+
+    bool b1= -20, b2= 0, b3 = 39; // bool can be numbers. all number (Positive or negative) is 1(true) except 0 is 0(false)
+    cout<<b1<<b2<<b3<<"\n";
     return 0;
 }
