@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-
+    /*
     int num;                        //Declare Variable in memory : num
 
     cout<<"Enter a number\n";       //Print Enter a number
@@ -11,7 +11,7 @@ int main(){
                                         
     cout<<"************\n";
     cout<<2 * num + 1<<endl;
-
+    */
     int a, b;
 
     cout<<"Enter two numbers"<<endl;
