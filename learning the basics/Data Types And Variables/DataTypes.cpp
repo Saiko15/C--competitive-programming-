@@ -29,7 +29,8 @@ int main() {
     cout<<b1<<b2<<b3<<"\n";
 
     cout<<(3/2) + (7/2)<<"\n"; // 1 + 4 int remove the fractional part.
-    cout<<(3.0/2) + (7/2.0)<<"\n";
+    cout<<(3.0/2) + (7/2.0)<<"\n"; // 1.5 + 4.5
+    cout<<(3.0/2) + (7/2)<<"\n"; // 1.5 + 4
 
     double a1 = 2, a2= 3, a3= 7; // don't have to be 2.0, 3.0 or 7.0. just be double is enough.
     cout<<(a2/a1) + (a3/a1)<<endl;
