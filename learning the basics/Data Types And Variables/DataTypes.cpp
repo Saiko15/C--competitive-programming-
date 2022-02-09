@@ -40,5 +40,9 @@ int main() {
     ch = ch + 1; // reassigned
     cout<<ch + 1<<endl; // -127 because of overflow
 
+    // const int {122}; // const means that this var can't be changed
+    cout<< INT16_MAX <<endl;  
+    cout<< INT16_MIN <<endl; // these are contant vars in the language
+
     return 0;
 }
