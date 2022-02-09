@@ -27,5 +27,11 @@ int main() {
 
     bool b1= -20, b2= 0, b3 = 39; // bool can be numbers. all number (Positive or negative) is 1(true) except 0 is 0(false)
     cout<<b1<<b2<<b3<<"\n";
+
+    cout<<(3/2) + (7/2)<<"\n"; // 1 + 4 int remove the fractional part.
+    cout<<(3.0/2) + (7/2.0)<<"\n";
+
+    double a1 = 2, a2= 3, a3= 7; // don't have to be 2.0, 3.0 or 7.0. just be double is enough.
+    cout<<(a2/a1) + (a3/a1)<<endl;
     return 0;
 }
