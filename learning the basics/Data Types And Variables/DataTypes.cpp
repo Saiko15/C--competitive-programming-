@@ -34,5 +34,11 @@ int main() {
 
     double a1 = 2, a2= 3, a3= 7; // don't have to be 2.0, 3.0 or 7.0. just be double is enough.
     cout<<(a2/a1) + (a3/a1)<<endl;
+
+    char ch = 127;
+    cout<<ch + 1<<endl; // 128
+    ch = ch + 1; // reassigned
+    cout<<ch + 1<<endl; // -127 because of overflow
+
     return 0;
 }
