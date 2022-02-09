@@ -9,4 +9,11 @@ int main() {
     char ch = 'S';
 
     cout<<"My name is "<<name<<". I'm "<<age<<". My monthly salary is "<<salary<<endl; 
+
+    // Declare 
+    int a;
+    // Assign
+    a = 55;
+    // get
+    cout<<a<<endl;
 }
