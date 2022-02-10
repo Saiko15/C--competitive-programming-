@@ -43,12 +43,16 @@ int main() {
     // evaluates from left to right, return the last thing after the-comma result
     cout<<(10, x=1, b=2*x, z=x+b, 40); //40
 
+    /*
     int num;
     num += 1; // num = num + 1
     num -= 1; // num = num - 1
     num *= 1; // num = num * 1
     num /= 1; // num = num / 1
+    */
+    // unary operator ++, -- (for one operand)
+    // bunary operator +, -, *, /, %, &&, ||, !, ^, =, +=, ... and so forth (for two operand)
+    // ternary operator ?: 
  
-
 
 }
