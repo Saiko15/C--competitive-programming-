@@ -32,7 +32,17 @@ int main() {
 
     int c=5, d= --c, h= c--; // prefix decrement and postix decrement
     cout<<"\n"<<c << d << h<<"\n"; // 3 4 4
-    cout<<"\n"<<c << d << h;  // also 3 4 4
+    cout<<"\n"<<c << d << h<<"\n";  // also 3 4 4
+    
+    // Assingnment Operator
+    // int x (LHS left hand side) = y * 2 (RHS right hand side)  = calles assignment operator
+    // RHS is expression (y*2) it's evaluated then assigned to LFS
+    // RHS must be an integer. if string would be CE (Compiler Error)
+    // ******** 
+    // Comma Operator
+    // evaluates from left to right, return the last thing after the-comma result
+    cout<<(10, x=1, b=2*x, z=x+b, 40); //40
+ 
 
 
 }
