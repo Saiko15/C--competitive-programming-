@@ -10,8 +10,9 @@ int main() {
     // so the equation can be (n+1) * n / 2
 
     int n;
-    // cin>>n;
-    n = 7;
+    cout<<"Enter a number : ";
+    cin>>n;
+    // n = 7;
 
     cout<<(n+1) * n / 2;
 
