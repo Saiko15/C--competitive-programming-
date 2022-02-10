@@ -30,7 +30,9 @@ int main() {
     cout<<"\n"<< a + a; // 32 because the previous a++ go for both a (a=16) ==> wrong
                         // the right is ==> a remains as 16 from the previous output
 
-    int c=5, d= --c, h= c--; // prefix decrement and postix decrement 
+    int c=5, d= --c, h= c--; // prefix decrement and postix decrement
+    cout<<"\n"<<c << d << h<<"\n"; // 3 4 4
+    cout<<"\n"<<c << d << h;  // also 3 4 4
 
 
 }
