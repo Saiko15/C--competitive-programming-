@@ -22,9 +22,9 @@ int main() {
     // 2 3 1
 
     num4 = num3; // 3
-	num3 = num1; // 1
-	num1 = num2; // 2
-	num2 = num4; // 3  
+	num3 = num2; // 2
+	num2 = num1; // 1
+	num1 = num4; // 3  
     
     // 3 1 2
 
