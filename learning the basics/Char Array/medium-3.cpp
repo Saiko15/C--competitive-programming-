@@ -7,3 +7,16 @@
 // ○ “10999999999” ⇒ “11000005554”
 // ○ “999999999999999999999999999999999” ⇒
 // “1000000000000000000000000000005554”
+#include<iostream>
+using namespace std;
+
+int main() {
+    int num = 0;
+    string str;
+    cin >> str;
+
+    for (int i = 0 ; i < str.size() ; i++){
+        num = num * 10 + (str[i] - '0');
+    }
+    cout << num + 5555;
+}
