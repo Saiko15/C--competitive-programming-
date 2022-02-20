@@ -8,3 +8,16 @@
 // ○ dddddddddddddd xyz ⇒ YES
 // ○ azzzzzzzz za ⇒ YES
 // ○ za azzzzzzzz ⇒ NO
+#include<iostream>
+using namespace std;
+
+int main() {
+    string first, second;
+    cin >> first >> second;
+
+    if (first.size() <= second.size())
+        cout << "YES";
+    else    
+        cout << "NO";
+    
+}
