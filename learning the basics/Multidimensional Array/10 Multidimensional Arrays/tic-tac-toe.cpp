@@ -18,8 +18,26 @@ int main() {
         cout << "\n";
     }
 
-    // bool is_there_winner = false;
-    // while(!is_there_winner){
-    //     cout << 
-    // }
+    bool is_there_winner = false;
+    while(!is_there_winner){
+        int r, c;
+        cout << "Player X turn. Enter empty location (r, c): ";
+        cin >> r >> c;
+        matrix[r-1][c-1] = 'X';
+        cout << "Player O turn. Enter empty location (r, c): ";
+        cin >> r >> c;
+        matrix[r-1][c-1] = 'O';
+
+        if (matrix[1][1] == matrix[2][2] && matrix[1][1] == matrix[0][0]){
+            cout << "Player" << matrix[1][1] << "won\n";
+            is_there_winner = true;
+        }
+        if(matrix[0][0] == matrix[0][2] && matrix [0][0] == matrix[0][1]){
+            cout << "Player" << matrix[1][1] << "won\n";
+            is_there_winner = true;
+        }
+            
+            
+
+    }
 }
