@@ -8,7 +8,7 @@ int sum_first_n (int arr[], int len, int N){
     if(N == 0)
         return 0;
     
-    return arr[N - 1] + sum_first_n(arr, len-1, N- 1);
+    return arr[N - 1] + sum_first_n(arr, len, N- 1); // not len-1, it doesn't depend on len anymore
 }
 
 int main() {
