@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
 
-int statuses[20][6], length[20], spec, stat, spec_num;
-    string names[20][6], name;
+int statuses[21][6], length[21], spec, stat, spec_num;
+    string names[21][6], name;
 
 void print_choices(){
     cout << "Enter your choice:\n";
@@ -12,44 +12,71 @@ void print_choices(){
     cout << "4) Exit\n";
 }
 
+void shift_right(){
+    int pos = length[spec];
+    if(pos == 0)
+        return;
+    for (int i = pos; i > 0; --i){
+        names[spec][i] = names[spec][i - 1];
+        statuses[spec][i]= statuses[spec][i - 1];
+    }
+}
+
+void shift_left(){
+    int pos = length[spec];
+    if (pos == 1)
+        return;
+    for (int i = 1; i < pos; ++i){
+        names[spec][i-1] = names[spec][i];
+        statuses[spec][i-1] = statuses[spec][i];
+    }
+}
+
 void add_patient(){
     cout << "Enter specialization, name, status: ";
     cin >> spec >> name >> stat;
     int pos = length[spec];
     if (pos >= 5)
         cout << "Sorry we can't add more patients for this specialization.";
+    else if(stat == 1){
+        shift_right();
+        names[spec][0] = name;
+        statuses[spec][0] = stat;
+        length[spec]++;
+    }    
     else {
-    specializations[count] = spec;
-    names[count] = name;
-    statuses[count] = stat;
-    count++;
+        names[spec][pos] = name;
+        statuses[spec][pos] = stat;
+        length[spec]++;
     }
 }
 
 void print_patient(){
-    int tmp;
-    
-            cout << "There are " << count << " patients in specialization " << specializations[count] <<"\n";
-            for (int i = 0; i < count; ++i){
-                if (statuses[i] == 0)
-                    cout << names[i] <<" regular\n";
+    for (int j = 0; j < 21; ++j){
+        if(length[j]){
+            cout << "There are " << length[j] << " patients in specialization " << j <<"\n";
+            for (int i = 0; i < length[j]; ++i){
+                if (statuses[j][i] == 0)
+                    cout << names[j][i] <<" regular\n";
                 else
-                    cout << names[i] << " urgent\n";
-            } 
-    
+                    cout << names[j][i] << " urgent\n";
+            }
+        } 
+        
+    }
 }
            
 void get_next_patients(){
     cout << "Enter specialization :";
-    cin >> spec_num;
-    for (int i = 0; i <= count; ++i){
-        if(spec_num == specializations[count]){
-            cout << names[count] <<" please go with the Dr \n";
-            count--;
+    cin >> spec;
+        if(length[spec]){
+            cout << names[spec][0] <<" please go with the Dr \n";
+            shift_left();
+            length[spec]--;
         }
         else
             cout << "No patients at the moment. Have rest, Dr\n";
-    }
+    
 }
 
 
