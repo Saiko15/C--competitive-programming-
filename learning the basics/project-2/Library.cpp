@@ -1,8 +1,12 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
+
+int length;
+
 struct book{
-    int id, quantity, borrowed_books_ids, length;
+    int id, quantity, borrowed_books_ids;
     string name, who_borrowed;
 
 
@@ -27,8 +31,15 @@ struct book{
         }
     }
 
+    bool compare_id(book &a, book& b){
+        if(a.id < b.id)
+            return true;
+        return false;
+
+    }
+
     void print_library_by_id() {
-        sort(books.id, );
+        sort(books[length], compare_id );
         for (int i = 0; i < length; ++i){
             cout << "id = " << books[i].id << " name = " << books[i].name<< " total quantity = " << books[i].quantity<< " total borrowed = " << books[i].borrowed_books_ids;
         }
@@ -43,7 +54,7 @@ struct user{
 };
 
 
-void menu(){
+int menu(){
     int choice;
     cout << "Library Menu:\n";
     cout << "1) add_book \n";
@@ -56,25 +67,33 @@ void menu(){
     cout << "8) user_return_book \n";
     cout << "9) print_users \n";
     cout << "10) Exit \n\n";
+
+    cin >> choice;
+
+    return choice;
+    
+}
+
+void run() {
+    int choice = menu();
     while (true) {
-        cout << "Enter your menu choice [1 - 10]: ";
-        cin >> choice;
-        if(choice > 10 || choice < 1)
-            cout << "Invalid choice. Try again\n";
-        else if (choice == 1)
-            books[length].add_book();
+    cout << "Enter your menu choice [1 - 10]: ";
+    cin >> choice;
+    if(choice > 10 || choice < 1)
+        cout << "Invalid choice. Try again\n";
+    else if (choice == 1)
+        books[length].add_book();
 
-        else if (choice == 4)
-            books.print_library_by_id();
-
-
-
-        else
-            break;
+    else if (choice == 4)
+        books.print_library_by_id();
 
 
 
-    }
+    else
+        break;
+
+    }    
+
 }
 
 int main() {
