@@ -12,41 +12,45 @@ struct book{
 
 
     void add_book() {
-        cout << " Enter book info : id & name& total quantity : ";
+        cout << "Enter book info : id & name& total quantity : ";
         cin >> id >> name >> quantity;
         length++;
     }
 
-    void search_books_by_prefix() {
-        string n;
-        cout << "Enter book name prefix :";
-        cin >> n;
-        for (int i = 0; i < length; ++i){
-            if (n =< books[i].name){
-                for (int j = 0; j < length; ++j)
-                    cout << books[j].name << "\n";
-            }
-            else
-                cout << "No books with such prefix\n";
-        }
-    }
+    
 
-    bool compare_id(book &a, book& b){
+   
+};
+
+book books[100];
+
+// void search_books_by_prefix() {
+//         string n;
+//         cout << "Enter book name prefix :";
+//         cin >> n;
+//         for (int i = 0; i < length; ++i){
+//             if (n =< books[i].name){
+//                 for (int j = 0; j < length; ++j)
+//                     cout << books[j].name << "\n";
+//             }
+//             else
+//                 cout << "No books with such prefix\n";
+//         }
+//     }
+
+bool compare_id(book &a, book& b){
         if(a.id < b.id)
             return true;
         return false;
 
     }
 
-    void print_library_by_id() {
-        sort(books[length], compare_id );
-        for (int i = 0; i < length; ++i){
-            cout << "id = " << books[i].id << " name = " << books[i].name<< " total quantity = " << books[i].quantity<< " total borrowed = " << books[i].borrowed_books_ids;
-        }
+void print_library_by_id() {
+    sort(books, books + length , compare_id );
+    for (int i = 0; i < length; ++i){
+        cout << "id = " << books[i].id << " name = " << books[i].name<< " total quantity = " << books[i].quantity<< " total borrowed = " << books[i].borrowed_books_ids <<"\n";
     }
-};
-
-book books[100];
+}
 
 struct user{
     int id[100];
@@ -68,8 +72,6 @@ int menu(){
     cout << "9) print_users \n";
     cout << "10) Exit \n\n";
 
-    cin >> choice;
-
     return choice;
     
 }
@@ -85,7 +87,7 @@ void run() {
         books[length].add_book();
 
     else if (choice == 4)
-        books.print_library_by_id();
+        print_library_by_id();
 
 
 
@@ -97,5 +99,7 @@ void run() {
 }
 
 int main() {
+    run();
 
+    return 0;
 }
